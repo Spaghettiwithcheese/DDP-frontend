@@ -1,0 +1,4 @@
+BusStopCode,BusStopName,IsSheltered,AreaName,Forecast,Weather
+12101,Ngee Ann Poly,Yes,Clementi,Partly Cloudy (Day),Clear
+12109,Opp Ngee Ann Poly,No,Clementi,Partly Cloudy (Day),Clear
+12091,Sim Campus,Yes,Clementi,Partly Cloudy (Day),Clear

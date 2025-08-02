@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DDP Bus Info Dashboard</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 40px; background: #f9f9f9; }
+    h1 { color: #007BFF; }
+    h2 { margin-top: 40px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { border: 1px solid #ccc; padding: 10px; text-align: left; }
+    th { background-color: #f0f0f0; }
+  </style>
+</head>
+<body>
+
+  <h1>🚍 DDP Assignment – Bus Information Dashboard</h1>
+  <p><strong>Refresh this page after running your workflows to see the latest data.</strong></p>
+
+  <h2>🚌 Arrival Times</h2>
+  <table id="arrivalTable"><thead></thead><tbody></tbody></table>
+
+  <h2>📍 Nearby Bus Stops</h2>
+  <table id="nearbyTable"><thead></thead><tbody></tbody></table>
+
+  <h2>🌧️ Weather-Aware Bus Stops</h2>
+  <table id="weatherTable"><thead></thead><tbody></tbody></table>
+
+  <script>
+    function loadCSV(file, tableId) {
+      fetch(file)
+        .then(r => r.text())
+        .then(data => {
+          const rows = data.trim().split('\n');
+          const headers = rows[0].split(',');
+          const tbody = document.querySelector(`#${tableId} tbody`);
+          const thead = document.querySelector(`#${tableId} thead`);
+
+          // Clear old content
+          thead.innerHTML = '';
+          tbody.innerHTML = '';
+
+          // Create header row
+          const headRow = document.createElement('tr');
+          headers.forEach(h => {
+            const th = document.createElement('th');
+            th.textContent = h;
+            headRow.appendChild(th);
+          });
+          thead.appendChild(headRow);
+
+          // Create data rows
+          for (let i = 1; i < rows.length; i++) {
+            const tr = document.createElement('tr');
+            rows[i].split(',').forEach(col => {
+              const td = document.createElement('td');
+              td.textContent = col;
+              tr.appendChild(td);
+            });
+            tbody.appendChild(tr);
+          }
+        });
+    }
+
+    loadCSV('arrivals.csv', 'arrivalTable');
+    loadCSV('nearby.csv', 'nearbyTable');
+    loadCSV('weather.csv', 'weatherTable');
+  </script>
+
+</body>
+</html>
