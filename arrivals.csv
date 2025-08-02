@@ -1,7 +1,7 @@
-Bus number,TimeTo1stArrival,1st bus crowd level,TimeTo2ndArrival,2nd bus crowd level,TimeTo3rdArrival,"3rd bus crowd level "
-151,Arriving in 7 mins,Medium,Arriving in 21 mins,Medium,Arriving in 38 mins,Medium
-154,Arriving in 7 mins,Low,Arriving in 27 mins,Low,Arriving in 40 mins,Low
-184,Arriving in 9 mins,Medium,Arriving in 21 mins,Medium,Arriving in 38 mins,Medium
-52,Arriving in 0 mins,Low,Arriving in 17 mins,Low,Arriving in 34 mins,Low
-74,Arriving in 0 mins,Low,Arriving in 0 mins,Low,Arriving in 15 mins,Low
-75,Arriving in 12 mins,Low,Arriving in 33 mins,Low,Arriving in 39 mins,Low
+Bus number,TimeTo1stArrival,1st bus crowd level,TimeTo2ndArrival,2nd bus crowd level,TimeTo3rdArrival,3rd bus crowd level 
+151,Arriving in 0 mins,Medium,Arriving in 17 mins,Medium,Arriving in 33 mins,Medium
+154,Arriving in 3 mins,Low,Arriving in 22 mins,Low,Arriving in 36 mins,Low
+184,Arriving in 5 mins,Low,Arriving in 17 mins,Low,Arriving in 32 mins,Low
+52,Arriving in 14 mins,Low,Arriving in 31 mins,Low,Arriving in 42 mins,Low
+74,Arriving in 10 mins,Low,Arriving in 20 mins,Low,Arriving in 28 mins,Low
+75,Arriving in 5 mins,Low,Arriving in 29 mins,Low,Arriving in 33 mins,Low
